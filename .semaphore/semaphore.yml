@@ -2,8 +2,8 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: e1-standard-2
-    os_image: ubuntu2004
+    type: s1-linux-aws-pool
+    os_image: ''
 blocks:
   - name: 'Block #1'
     task:
@@ -11,3 +11,13 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+            - cache list
+            - cache usage
+            - echo "something something" > /tmp/something
+            - cat /tmp/something
+            - cache store key-0001 /tmp/something
+            - cache list
+            - cache usage
+            - rm /tmp/something
+            - cache restore key-0001
+            - cat /tmp/something
