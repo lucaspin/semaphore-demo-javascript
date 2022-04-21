@@ -11,3 +11,7 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+            - echo "something" > testing.txt
+            - artifact push project testing.txt -v
+            - artifact push workflow testing.txt -v
+            - artifact push job testing.txt -v
