@@ -13,3 +13,4 @@ blocks:
             - checkout
             - echo "something" > /tmp/somefile.txt
             - artifact push job /tmp/somefile.txt -v
+            - artifact push workflow /tmp/somefile.txt -v
