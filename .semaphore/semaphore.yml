@@ -12,4 +12,4 @@ blocks:
           commands:
             - checkout
             - echo "something" > /tmp/somefile.txt
-            - artifact push job somefile.txt -v
+            - artifact push job /tmp/somefile.txt -v
