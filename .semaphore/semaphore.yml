@@ -2,7 +2,7 @@ version: v1.0
 name: Initial Pipeline
 agent:
   machine:
-    type: s1-artifacts-testing
+    type: s1-lucaspin-test
     os_image: ''
 blocks:
   - name: 'Block #1'
@@ -11,7 +11,3 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
-            - echo "something" > testing.txt
-            - artifact push project testing.txt -v
-            - artifact push workflow testing.txt -v
-            - artifact push job testing.txt -v
